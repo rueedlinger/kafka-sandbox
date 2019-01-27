@@ -28,13 +28,13 @@ RUN rm $JDK_FILE
 ENV ZOOKEPER_VERSION 3.4.13
 ENV ZOOKEPER_FILE zookeeper-$ZOOKEPER_VERSION.tar.gz
 ENV ZOOKEEPER_URL https://www-us.apache.org/dist/zookeeper/zookeeper-$ZOOKEPER_VERSION/$ZOOKEPER_FILE
+ENV ZOOKEEPER_DIR /usr/local/zookeeper
 
 RUN mkdir /var/lib/zookeeper
 RUN wget -O $ZOOKEPER_FILE $ZOOKEEPER_URL
 RUN tar -zxf $ZOOKEPER_FILE -C /usr/local
-RUN mv /usr/local/zookeeper-$ZOOKEPER_VERSION /usr/local/zookeeper
+RUN mv /usr/local/zookeeper-$ZOOKEPER_VERSION $ZOOKEEPER_DIR
 
-ENV ZOOKEEPER_DIR /usr/local/zookeeper
 ENV PATH $ZOOKEEPER_DIR/bin:$PATH
 ADD zoo.cfg $ZOOKEEPER_DIR/conf
 RUN rm $ZOOKEPER_FILE 

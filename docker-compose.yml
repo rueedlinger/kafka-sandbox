@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  zookeeper:
+    build: 'docker/zookeeper'
+    ports:
+      - '2181:2181'
+  kafka:
+    build: 'docker/kafka'
+    ports:
+      - '9092:9092'

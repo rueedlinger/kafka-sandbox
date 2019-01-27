@@ -4,7 +4,7 @@ __kafka-sandbox__ are Docker images (Alpine Linux and Zulu OpenJDK 11) and code 
 ## Firs Steps...
 
 ### Build the Docker Images
-This will build the Docker images for Apache Kafka and Zookeeper with default settings. To change the settings just adapt the files [docker/kafka/server.properties](server.properties) for Kafka and [docker/zookeeper/zoo.cfg](zoo.cfg) for Zookeeper before you build the Docker images.
+This will build the Docker images for Apache Kafka and Zookeeper with default settings. To change the settings just adapt the files [server.properties](docker/kafka/server.properties) for Kafka and [zoo.cfg](docker/zookeeper/zoo.cfg) for Zookeeper before you build the Docker images.
 
 
 ```bash
@@ -98,4 +98,7 @@ Other commands are:
 
 
 ## Code Examples
-tbd
+Here are code examples for Kafka consumer and producer in different programming languages:
+- [Java](java)
+- [Python](python)
+- [JavaScript (node)](node)

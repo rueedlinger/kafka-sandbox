@@ -18,6 +18,8 @@ With _docker-compose_ you can start up Apache Kafka and Zookeeper.
 docker-compose up
 ```
 
+> __Hint:__ A _docker-compose up -V_  will recreate the anonymous volumes instead of retrieving data from the previous containers. So when you run into trouble (Kafka topics, messages, etc.) just use the flag _-V_ to have a clean Apache Kafka installation without any messages and topics previously created.
+
 ### Test the Apache Kafka and Zookeeper
 To test the connection to Apache Kafka and Zookeeper you should install the Apache Kafka and Apache Zookeeper on your local machine, so that you have access to the Kafka (kafka-topics, kafka-console-producer, kafka-console-consumer, etc.)  and Zookeeper command line tools (zookeeper-shell). This means that you should install Apache Kafka on your local machine as well.
 

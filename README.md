@@ -8,7 +8,7 @@ This will build the Docker images for Apache Kafka and Zookeeper with default se
 
 
 ```bash
-docker-compose up
+docker-compose build
 ```
 
 ### Start Kafka and Zookeeper

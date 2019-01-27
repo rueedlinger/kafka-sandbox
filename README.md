@@ -32,10 +32,14 @@ Let's create a topic named "test" with a single partition and only one replica:
 ```bash
 kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 ```
-We can now see that topic if we run the list topic command:
 
+We can now see that topic if we run the list topic command:
 ```bash
 kafka-topics --list --zookeeper localhost:2181
+```
+
+The output might look like this.
+```bash
 __consumer_offsets
 test
 ```
@@ -84,6 +88,7 @@ WATCHER::
 WatchedEvent state:SyncConnected type:None path:null
 [0]
 ```
+
 Other commands are:
 - _ls /brokers/ids_  Gives the list of active brokers
 - _ls /brokers/topics_ Gives the list of topics
